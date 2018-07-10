@@ -11,6 +11,7 @@
 node_tmp/
 node_modules/
 npm-debug.log.*
+src/main/webapp/bower_components/*
 
 ######################
 # SASS
