@@ -10,6 +10,7 @@ pipeline {
     stage('NPM Install') {
       steps {
         bat 'npm install'
+        bat 'bower install'
       }
     }
     stage('Clean') {
