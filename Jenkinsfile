@@ -9,6 +9,7 @@ pipeline {
     stage('YARN Install') {
       steps {
         bat 'yarn install'
+        bat 'bower install'
       }
     }
     stage('Clean') {
