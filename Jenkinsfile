@@ -5,8 +5,6 @@ pipeline {
       steps {
         bat 'node -v'
         bat 'npm -v'
-        bat 'bower -v'
-        bat 'gulp -v'
       }
     }
     stage('NPM Install') {
@@ -21,7 +19,7 @@ pipeline {
     }
     stage('Building') {
       steps {
-        bat 'gradlew bootRepackage -Pprod -x test'
+        bat 'gradlew bootRepackage -Pprod'
       }
     }
   }
