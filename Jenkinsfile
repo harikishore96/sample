@@ -3,14 +3,12 @@ pipeline {
   stages {
     stage('Check Tools') {
       steps {
-        bat 'node -v'
-        bat 'npm -v'
+        bat 'yarn -v'
       }
     }
-    stage('NPM Install') {
+    stage('YARN Install') {
       steps {
-        bat 'npm install'
-        bat 'bower install'
+        bat 'yarn install'
       }
     }
     stage('Clean') {
