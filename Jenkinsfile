@@ -3,25 +3,25 @@ pipeline {
   stages {
     stage('Check Tools') {
       steps {
-        sh '''node -v
-npm -v
-bower -v
-gulp -v'''
+        bat 'node -v'
+        bat 'npm -v'
+        bat 'bower -v'
+        bat 'gulp -v'
       }
     }
     stage('NPM Install') {
       steps {
-        sh 'npm install'
+        bat 'npm install'
       }
     }
     stage('Clean') {
       steps {
-        sh './gradlew clean'
+        bat 'gradlew clean'
       }
     }
     stage('Building') {
       steps {
-        sh './gradlew bootRepackage -Pprod -x test'
+        bat 'gradlew bootRepackage -Pprod -x test'
       }
     }
   }
